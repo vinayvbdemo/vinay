@@ -1,0 +1,66 @@
+import time 
+from selenium import webdriver
+from selenium.webdriver import chrome
+driver = webdriver.Chrome()
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+driver.maximize_window()
+driver.get("https://tech-training-qacircle.github.io/locator-practice/src/locatorPractice.html")
+ac = ActionChains(driver,chrome())
+ac.click()
+projects = driver.find_element(By.ID,"mul-projectName")
+downdrop = Select(projects)
+#downdrop.select_by_visible_text("Project-2")
+#time.sleep(3)
+#print(downdrop.first_selected_option.text)
+#downdrop.select_by_index(3)
+#time.sleep(3)
+#print(downdrop.first_selected_option.text)
+#downdrop.select_by_value("Project-1")
+#print(downdrop.first_selected_option.text)
+#.sleep(5)
+#for selectedoption in downdrop.all_selected_options:
+#    print(selectedoption.text)
+#print(downdrop.is_multiple)
+#for option in downdrop.options:
+  #print(option.text)
+#downdrop.deselect_all()
+#for  index, option in enumerate(downdrop.options):
+   # time.sleep(1)
+    #downdrop.select_by_index(index)
+   #downdrop.select_by_value(option.get_attribute("value"))
+    #downdrop.select_by_visible_text(option.text)
+    #downdrop.select_by_index(4)
+    #downdrop.select_by_value("project-1")
+#textarea = driver.find_element(By.ID, "description")
+#textarea.send_keys("Name: john", Keys.ENTER, "age: 22")
+#time.sleep(3)
+#textarea.send_keys(Keys.CONTROL + "a")
+#time.sleep(3)
+#textarea.send_keys(Keys.BACKSPACE)
+#textarea.clear()
+time.sleep(3)
+projects = driver.find_element(By.CSS_SELECTOR, "mul-projectName> option[value ='Project-2']")
+project1 = driver.find_element(By.CSS_SELECTOR, "mul-projectName> option[value ='Project-1']")
+project2 = driver.find_element(By.CSS_SELECTOR, "mul-projectName> option[value ='Project-2']")
+project3 = driver.find_element(By.CSS_SELECTOR, "mul-projectName> option[value ='Project-3']")
+project4 = driver.find_element(By.CSS_SELECTOR, "mul-projectName> option[value ='Project-4']")
+project5 = driver.find_element(By.CSS_SELECTOR, "mul-projectName> option[value ='Project-5']")
+project6 = driver.find_element(By.CSS_SELECTOR, "mul-projectName> option[value ='Project-6']")
+time.sleep(3)
+ac =ActionChains(driver)
+ac.click(project3)
+#ac.key_down(Keys.CONTROL)
+ac.pause(2)
+ac.click(project5)
+ac.pause(2)
+ac.click(project1)
+#ac.key_up(Keys.CONTROL)
+ac.pause(2)
+ac.perform()
+time.sleep(3)
+driver.quit()
+
+
