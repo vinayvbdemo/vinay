@@ -12,3 +12,5 @@ Driver.get("https://tech-training-qacircle.github.io/locator-practice/src/locato
 time.sleep(5)
 driver.quit()
 print ("db closed")
+print ("db logs added")
+
