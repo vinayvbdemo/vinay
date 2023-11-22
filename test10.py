@@ -7,7 +7,8 @@ from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
 from selenium import webdriver
 Driver = webdriver.Edge()
-Driver.get("https://www.flipkart.com/mobiles/~cs-tt5wilg3vt/pr?sid=tyy%2C4io&collection-tab-name=Moto+g13&param=37454634&otracker=clp_bannerads_1_25.bannerAdCard.BANNERADS_fdgvdc_mobile-phones-store_F2CQ4ABRSGAO")
-Webelement = webdriver.find_element (BY.NAME, 'MOTOROLA g13').click()
+Driver.get("https://tech-training-qacircle.github.io/locator-practice/src/locatorPractice.html")
+#Webelement = webdriver.find_element (BY.NAME, 'MOTOROLA g13').click()
 time.sleep(5)
 driver.quit()
+print ("db closed")
